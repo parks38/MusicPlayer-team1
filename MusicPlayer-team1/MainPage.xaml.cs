@@ -24,7 +24,17 @@ namespace MusicPlayer_team1
     {
         public MainPage()
         {
-            this.InitializeComponent();                        
+            this.InitializeComponent();
+        }
+
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void MediaPlayer_MediaFailed(object sender, ExceptionRoutedEventArgs e)
+        {
+
         }
     }
 }

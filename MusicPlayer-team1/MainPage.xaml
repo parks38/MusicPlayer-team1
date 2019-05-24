@@ -8,8 +8,24 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        
+    <Grid Background="Black">
+        <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Vertical" Width="404">
+                    <AppBarButton Label="Add Media" HorizontalAlignment="Left" Height="57" Width="94" Click="AddButton_Click" Foreground="#FFFFB836" Icon="Add" Visibility="Visible" 
+                              Margin="0,0,10,10" />
+                    <ListView Width="390" ScrollViewer.VerticalScrollBarVisibility="Visible" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                         Height="700" BorderBrush="AntiqueWhite" BorderThickness="1" Header="Playlist Here" />
+                </StackPanel>
+            <MediaElement x:Name="mediaPlayer" Height="Auto" VerticalAlignment="Stretch" Width="1096" RequestedTheme="Dark" AreTransportControlsEnabled="True"
+                          MediaFailed="MediaPlayer_MediaFailed">
+                <MediaElement.TransportControls>
+                    <MediaTransportControls IsCompact="False" IsStopButtonVisible="True" IsStopEnabled="True" IsPlaybackRateButtonVisible="True" IsNextTrackButtonVisible="True" 
+                                            IsPreviousTrackButtonVisible="True">                        
+                    </MediaTransportControls>
+                </MediaElement.TransportControls>
+            </MediaElement>
+        </StackPanel>
+
 
     </Grid>
 </Page>
