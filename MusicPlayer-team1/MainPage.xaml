@@ -16,14 +16,12 @@
                     <ListView Width="390" ScrollViewer.VerticalScrollBarVisibility="Visible" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                          Height="700" BorderBrush="AntiqueWhite" BorderThickness="1" Header="Playlist Here" />
                 </StackPanel>
-            <MediaElement x:Name="mediaPlayer" Height="Auto" VerticalAlignment="Stretch" Width="1096" RequestedTheme="Dark" AreTransportControlsEnabled="True"
-                          MediaFailed="MediaPlayer_MediaFailed">
-                <MediaElement.TransportControls>
-                    <MediaTransportControls IsCompact="False" IsStopButtonVisible="True" IsStopEnabled="True" IsPlaybackRateButtonVisible="True" IsNextTrackButtonVisible="True" 
-                                            IsPreviousTrackButtonVisible="True">                        
+            <MediaPlayerElement x:Name="mediaPlayer" Height="Auto" VerticalAlignment="Stretch" Width="1096" RequestedTheme="Dark" AreTransportControlsEnabled="True" >
+                <MediaPlayerElement.TransportControls>
+                    <MediaTransportControls IsCompact="False" IsStopButtonVisible="True" IsStopEnabled="True" IsNextTrackButtonVisible="True" IsPreviousTrackButtonVisible="True" >                        
                     </MediaTransportControls>
-                </MediaElement.TransportControls>
-            </MediaElement>
+                </MediaPlayerElement.TransportControls>
+            </MediaPlayerElement>
         </StackPanel>
 
 
