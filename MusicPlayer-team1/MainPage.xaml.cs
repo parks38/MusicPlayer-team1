@@ -20,6 +20,14 @@ namespace MusicPlayer_team1
 
         }
 
-       
+        private void ShuffleButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
