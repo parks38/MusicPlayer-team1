@@ -17,8 +17,7 @@ namespace MusicPlayer_team1
             AddMusic _addMusic = new AddMusic();
             await _addMusic.AddMedia(playList, mediaPlayer);
         }
-
-        
+                
             private void ShuffleButton_Click(object sender, RoutedEventArgs e)
             {
 
@@ -34,13 +33,13 @@ namespace MusicPlayer_team1
             if (e.Key == Windows.System.VirtualKey.Space)
                 e.Handled = true;
 
-            if (mediaPlayerElement.MediaPlayer.PlaybackSession.PlaybackState == Windows.Media.Playback.MediaPlaybackState.Playing)
+            if (mediaPlayer.MediaPlayer.PlaybackSession.PlaybackState == Windows.Media.Playback.MediaPlaybackState.Playing)
             {
-                mediaPlayerElement.MediaPlayer.Pause();
+                mediaPlayer.MediaPlayer.Pause();
             }
-            else if (mediaPlayerElement.MediaPlayer.PlaybackSession.PlaybackState == Windows.Media.Playback.MediaPlaybackState.Paused)
+            else if (mediaPlayer.MediaPlayer.PlaybackSession.PlaybackState == Windows.Media.Playback.MediaPlaybackState.Paused)
             {
-                mediaPlayerElement.MediaPlayer.Play();
+                mediaPlayer.MediaPlayer.Play();
             }
         }
     }
