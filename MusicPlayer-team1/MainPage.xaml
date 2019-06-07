@@ -21,7 +21,7 @@
                 </StackPanel>
             <MediaPlayerElement x:Name="mediaPlayerElement" Height="Auto" VerticalAlignment="Stretch" Width="1096" RequestedTheme="Dark" AreTransportControlsEnabled="True" >
                 <MediaPlayerElement.TransportControls>
-                    <MediaTransportControls IsCompact="False" IsStopButtonVisible="True" IsStopEnabled="True" IsNextTrackButtonVisible="True" IsPreviousTrackButtonVisible="True" >                        
+                    <MediaTransportControls KeyDown="MediaTransportControls_KeyDown" IsCompact="False" IsStopButtonVisible="True" IsStopEnabled="True" IsNextTrackButtonVisible="True" IsPreviousTrackButtonVisible="True" >                        
                     </MediaTransportControls>
                 </MediaPlayerElement.TransportControls>
             </MediaPlayerElement>
