@@ -12,14 +12,14 @@
         <StackPanel Orientation="Horizontal">
                 <StackPanel Orientation="Vertical" Width="404">
                 <StackPanel Orientation="Horizontal" Height="80" BorderBrush="Transparent">
-                    <AppBarButton Label="Add Media" Icon="Add" Click="AddButton_Click" Visibility="Visible" Foreground="#FFFFB836" HorizontalAlignment="Left" Height="65" Width="80" MaxHeight="75"/>
+                    <AppBarButton Label="Add Media" Icon="Add" Click="AddButton_ClickAsync" Visibility="Visible" Foreground="#FFFFB836" HorizontalAlignment="Left" Height="65" Width="80" MaxHeight="75"/>
                     <AppBarButton Label="Shuffle" Icon="Shuffle" Click="ShuffleButton_Click" Visibility="Visible" Foreground="#FFFFB836" HorizontalAlignment="Left" Height="65" Width="80" MaxHeight="75"/>
                     <AppBarButton Label="Delete" Icon="Delete" Click="DeleteButton_Click" Foreground="#FFFFB836" Visibility="Visible" HorizontalAlignment="Right" Height="65" Width="80" MaxHeight="75" Margin="150,0,0,0"/>
                 </StackPanel>
-                <ListView Width="390" ScrollViewer.VerticalScrollBarVisibility="Visible" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                <ListView Name="playList"  Width="390" ScrollViewer.VerticalScrollBarVisibility="Visible" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                          Height="700" BorderBrush="AntiqueWhite" BorderThickness="1" Header="Playlist"  />
                 </StackPanel>
-            <MediaPlayerElement x:Name="mediaPlayerElement" Height="Auto" VerticalAlignment="Stretch" Width="1096" RequestedTheme="Dark" AreTransportControlsEnabled="True" >
+            <MediaPlayerElement x:Name="mediaPlayer" Height="Auto" VerticalAlignment="Stretch" Width="1096" RequestedTheme="Dark" AreTransportControlsEnabled="True" >
                 <MediaPlayerElement.TransportControls>
                     <MediaTransportControls IsCompact="False" IsStopButtonVisible="True" IsStopEnabled="True" IsNextTrackButtonVisible="True" IsPreviousTrackButtonVisible="True" >                        
                     </MediaTransportControls>

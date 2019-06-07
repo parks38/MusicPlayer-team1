@@ -6,43 +6,36 @@ using System.Threading.Tasks;
 using Windows.Media.Core;
 using Windows.Media.Playback;
 using Windows.Storage.Pickers;
+using Windows.UI.Xaml.Controls;
 
 namespace MusicPlayer_team1
 {
     public class AddMusic
     {
-        MediaSource mediaSource;
-
-
-        MediaPlayer mediaPlayer;
-
-
-        private async System.Threading.Tasks.Task AddMedia()
+        public async System.Threading.Tasks.Task AddMedia(ListView listView, MediaPlayerElement mediaPlayerElement)
         {
 
             var filePicker = new Windows.Storage.Pickers.FileOpenPicker();
-            string[] fileTypes = new string[] { ".wmv", ".mp3", ".mp4" };
+            string[] fileTypes = new string[] { ".wmv", ".mp3", ".mp4", ".wma" };
             foreach (string fileType in fileTypes)
             {
                 filePicker.FileTypeFilter.Add(fileType);
-
-
             }
+
             filePicker.SuggestedStartLocation = PickerLocationId.MusicLibrary;
-            Windows.Storage.StorageFile file = await filePicker.PickMultipleFilesAsync;
-            if (!(file is null))
+
+            MediaPlaybackList _mediaPlaybackList = new MediaPlaybackList();
+
+            var pickedFiles = await filePicker.PickMultipleFilesAsync();
+
+            foreach (var file in pickedFiles)
             {
-
-                mediaSource = MediaSource.CreateFromStorageFile(file);
-                mediaPlayer.Source = mediaSource;
-                
-
-
-
-
+                var mediaPlaybackItem = new MediaPlaybackItem(MediaSource.CreateFromStorageFile(file));
+                _mediaPlaybackList.Items.Add(mediaPlaybackItem);
+                listView.Items.Add(file.Name);
             }
+            _mediaPlaybackList.AutoRepeatEnabled = true;
+            mediaPlayerElement.Source = _mediaPlaybackList;
         }
-
     }
-
 }
