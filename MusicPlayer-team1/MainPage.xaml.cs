@@ -28,6 +28,21 @@ namespace MusicPlayer_team1
             {
 
             }
+
+            private void MediaTransportControls_KeyDown(object sender, Windows.UI.Xaml.Input.KeyRoutedEventArgs e)
+        {
+            if (e.Key == Windows.System.VirtualKey.Space)
+                e.Handled = true;
+
+            if (mediaPlayerElement.MediaPlayer.PlaybackSession.PlaybackState == Windows.Media.Playback.MediaPlaybackState.Playing)
+            {
+                mediaPlayerElement.MediaPlayer.Pause();
+            }
+            else if (mediaPlayerElement.MediaPlayer.PlaybackSession.PlaybackState == Windows.Media.Playback.MediaPlaybackState.Paused)
+            {
+                mediaPlayerElement.MediaPlayer.Play();
+            }
         }
+    }
    
 }
