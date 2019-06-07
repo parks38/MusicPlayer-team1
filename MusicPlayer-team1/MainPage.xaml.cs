@@ -1,5 +1,10 @@
 ﻿using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.Media.Core;
+using Windows.Media.Playback;
+using Windows.Storage;
+using Windows.Storage.Pickers;
+using Windows.Storage.Streams;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -10,24 +15,32 @@ namespace MusicPlayer_team1
     /// </summary>
     public sealed partial class MainPage : Page
     {
+       
+
         public MainPage()
         {
-            this.InitializeComponent();
+            
         }
-
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-
+            
+            mediaPlayerElement.AutoPlay = true;
         }
 
-        private void ShuffleButton_Click(object sender, RoutedEventArgs e)
-        {
+        
 
+
+        
+
+            private void ShuffleButton_Click(object sender, RoutedEventArgs e)
+            {
+
+            }
+
+            private void DeleteButton_Click(object sender, RoutedEventArgs e)
+            {
+
+            }
         }
-
-        private void DeleteButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-    }
+   
 }
