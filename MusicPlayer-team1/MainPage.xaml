@@ -10,14 +10,13 @@
 
     <Grid Background="Black">
         <StackPanel Orientation="Horizontal">
-                <StackPanel Orientation="Vertical" Width="404">
+                <StackPanel Orientation="Vertical" Width="404" >
                 <StackPanel Orientation="Horizontal" Height="80" BorderBrush="Transparent">
-                    <AppBarButton Label="Add Media" Icon="Add" Click="AddButton_ClickAsync" Visibility="Visible" Foreground="#FFFFB836" HorizontalAlignment="Left" Height="65" Width="80" MaxHeight="75"/>
-                    <AppBarButton Label="Shuffle" Icon="Shuffle" Click="ShuffleButton_Click" Visibility="Visible" Foreground="#FFFFB836" HorizontalAlignment="Left" Height="65" Width="80" MaxHeight="75"/>
-                    <AppBarButton Label="Delete" Icon="Delete" Click="DeleteButton_Click" Foreground="#FFFFB836" Visibility="Visible" HorizontalAlignment="Right" Height="65" Width="80" MaxHeight="75" Margin="150,0,0,0"/>
+                    <AppBarButton Label="Add" Icon="Add" Click="AddButton_ClickAsync" Visibility="Visible" Foreground="#FFDD7700" HorizontalAlignment="Left" Height="65" Width="80" MaxHeight="75"/>
+                    <AppBarButton Label="Delete" Icon="Delete" Click="DeleteButton_Click" Foreground="#FFDD7700" Visibility="Visible" Height="65" Width="80" MaxHeight="75" />
                 </StackPanel>
                 <ListView Name="playList"  Width="390" ScrollViewer.VerticalScrollBarVisibility="Visible" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                         Height="700" BorderBrush="AntiqueWhite" BorderThickness="1" Header="Playlist"  />
+                         Height="700" Header="Playlist" RequestedTheme="Dark" FontFamily="Ink Free" FontSize="20" />
                 </StackPanel>
             <MediaPlayerElement x:Name="mediaPlayer" Height="Auto" VerticalAlignment="Stretch" Width="1096" RequestedTheme="Dark" AreTransportControlsEnabled="True" >
                 <MediaPlayerElement.TransportControls>

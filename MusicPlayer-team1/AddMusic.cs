@@ -32,7 +32,7 @@ namespace MusicPlayer_team1
             {
                 var mediaPlaybackItem = new MediaPlaybackItem(MediaSource.CreateFromStorageFile(file));
                 _mediaPlaybackList.Items.Add(mediaPlaybackItem);
-                listView.Items.Add(file.Name);
+                listView.Items.Add(file.DisplayName);
             }
             _mediaPlaybackList.AutoRepeatEnabled = true;
             mediaPlayerElement.Source = _mediaPlaybackList;
