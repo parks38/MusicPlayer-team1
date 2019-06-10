@@ -11,4 +11,4 @@ Simple Functions:
     • Simple volume setup
     • Shortcut keys
         ○ [Space] play or pause current file
-      • Responsive UI
+    • Responsive UI
